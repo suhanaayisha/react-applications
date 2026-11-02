@@ -4,21 +4,24 @@
     font-size: 16px;
 }
 
+.birthday-form {
+    display: inline-flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
 .party-popper {
     width: 200px;
     height: 200px;
 }
 
-.fade{
+/* Bootstrap 5 already owns the `.fade` class, so this uses its own name */
+.fade-in {
     animation-name: fade-in;
     animation-duration: 2s;
 }
 
-.age-stats {
-    opacity: 100;
-}
-
 @keyframes fade-in {
-    from { opacity: 0}
-    to { opacity: 100}
+    from { opacity: 0 }
+    to { opacity: 1 }
 }

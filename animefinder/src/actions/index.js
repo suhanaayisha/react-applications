@@ -1,16 +1,16 @@
-export const SET_RECIPES = 'SET_RECIPES';
-export const FAVORITE_RECIPE = 'FAVORITE_RECIPE';
+export const SET_ANIMES = 'SET_ANIMES';
+export const FAVORITE_ANIME = 'FAVORITE_ANIME';
 
-export function setRecipes(items){
+export function setAnimes(items){
     return {
-        type: SET_RECIPES,
+        type: SET_ANIMES,
         items
     }
 }
 
-export function favoriteRecipe(recipe){
+export function favoriteAnime(anime){
     return {
-        type: FAVORITE_RECIPE,
-        recipe
+        type: FAVORITE_ANIME,
+        anime
     }
 }

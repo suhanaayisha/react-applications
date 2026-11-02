@@ -1,13 +1,12 @@
-This project is a simple app which lets you pick a date, and returns your age in exact number of years, months and days
+# Age Teller
 
-## Available Scripts
+Pick your birthday and the app tells you your exact age in years, months and days.
 
-In the project directory, you can run:
+## Running it
 
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-
+```bash
+npm install
+npm run dev       # start the dev server at http://localhost:5173
+npm run build     # production build into dist/
+npm run preview   # serve the production build locally
+```

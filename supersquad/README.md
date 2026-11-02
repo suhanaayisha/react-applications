@@ -1,14 +1,12 @@
-This project is a simple app which lets us choose from a range of super heroes. The selected heroes make the super squad. As the heroes are added and removed, the overall squad stats changes
+# SuperSquad
 
-## Available Scripts
+Choose from a range of superheroes to build your super squad. As heroes are added and removed, the squad's overall strength, speed and intelligence update. State is managed with Redux.
 
-In the project directory, you can run:
+## Running it
 
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
+```bash
+npm install
+npm run dev       # start the dev server at http://localhost:5173
+npm run build     # production build into dist/
+npm run preview   # serve the production build locally
+```

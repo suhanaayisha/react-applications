@@ -1,14 +1,18 @@
-This project was is an app which lets us generate memes. We have to have the text we want and select the picture, and the meme will be generated.
+# Meme Generator
 
-## Available Scripts
+Type top and bottom text, then click a meme template to caption it. Templates and captioned images come from the [imgflip API](https://imgflip.com/api). Uses Redux with redux-thunk.
 
-In the project directory, you can run:
+## Setup
 
-### `yarn start`
+Captioning memes needs a free imgflip account. Copy `.env.example` to `.env.local` and fill in your username and password. `.env.local` is gitignored.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Vite bundles `VITE_` variables into the browser JavaScript, so anyone who can load the built app can read them. Use this for local development only, and don't deploy a build that contains your credentials.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Running it
 
+```bash
+npm install
+npm run dev       # start the dev server at http://localhost:5173
+npm run build     # production build into dist/
+npm run preview   # serve the production build locally
+```

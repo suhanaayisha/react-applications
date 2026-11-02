@@ -1,14 +1,14 @@
-This project is a simple react application, where you some choices and the computer makes a decision for you
+# Indecision App
 
-## Available Scripts
+Add the choices you're stuck between and let the computer make the decision for you. Options are saved in localStorage. Styled with Sass and uses react-modal for the result popup.
 
-In the project directory, you can run:
+`src/playground/` holds the small experiments I wrote while learning React. They aren't part of the app.
 
-### `yarn run build`
+## Running it
 
-Builds the app
-
-### `yarn run dev-server`
-
-Runs the app in the development mode.<br />
-Open (http://localhost:8080) to view it in the browser.
+```bash
+npm install
+npm run dev       # start the dev server at http://localhost:5173
+npm run build     # production build into dist/
+npm run preview   # serve the production build locally
+```

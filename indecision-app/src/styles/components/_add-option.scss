@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use '../base/settings' as *;
+
 .add-option-error{
     color: $off-white;
     font-style: italic;
@@ -14,7 +17,7 @@
 .add-option__input{
     background: $dark-blue;
     border: none;
-    border-bottom: 0.3rem solid darken($dark-blue,10%);
+    border-bottom: 0.3rem solid color.adjust($dark-blue, $lightness: -10%);
     color: $off-white;
     padding: $s-size;
     flex-grow: 1;

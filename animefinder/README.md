@@ -1,15 +1,14 @@
-This project is used to display list of animes depending on the animal the user searches for. The information about the anime is taken from an api.
-This project was initally supposed to be a recipe finder, but since the api was failing , I changed it to this. Hence, certain places you might still see the word "recipe" being used instead of "anime".
+# Anime Finder
 
-## Available Scripts
+Search for anime by title and star the ones you like to add them to a Favorites page. Data comes from the [Jikan API](https://jikan.moe/) (an unofficial MyAnimeList API). Uses Redux and React Router.
 
-In the project directory, you can run:
+This started out as a recipe finder, but that API stopped working, so it became an anime finder.
 
-### `yarn start`
+## Running it
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
+```bash
+npm install
+npm run dev       # start the dev server at http://localhost:5173
+npm run build     # production build into dist/
+npm run preview   # serve the production build locally
+```

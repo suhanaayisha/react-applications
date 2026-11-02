@@ -3,7 +3,7 @@ body{
     padding: 5%;
 }
 
-.recipe-item{
+.anime-item{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,14 +11,14 @@ body{
     padding: 5px;
 }
 
-.recipe-text{
+.anime-text{
     display: inline-block;
     text-align: left;
     padding-right: 10px;
     width: 400px;
 }
 
-.recipe-img{
+.anime-img{
     display: inline-block;
     right: 0;
     width: 100px;
@@ -38,4 +38,17 @@ body{
     position: absolute;
     left: 30px;
     top: 30px;
+}
+.search-form{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0 20px;
+}
+
+.anime-text p{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

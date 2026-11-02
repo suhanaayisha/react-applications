@@ -1,25 +1,27 @@
 import { combineReducers } from 'redux';
-import { SET_RECIPES, FAVORITE_RECIPE } from '../actions/index';
+import { SET_ANIMES, FAVORITE_ANIME } from '../actions/index';
 
-function recipes(state = [], action){
+function animes(state = [], action){
     switch(action.type){
-        case SET_RECIPES:
+        case SET_ANIMES:
             return action.items;
         default:
             return state;
     }
 }
 
-function favoriteRecipes(state = [], action){
+function favoriteAnimes(state = [], action){
     switch(action.type){
-        case FAVORITE_RECIPE:
-            state= [...state, action.recipe]
-            return state;
+        case FAVORITE_ANIME:
+            if (state.some(anime => anime.mal_id === action.anime.mal_id)) {
+                return state;
+            }
+            return [...state, action.anime];
         default:
             return state;
     }
 }
 
-const rootReducer = combineReducers({ recipes, favoriteRecipes });
+const rootReducer = combineReducers({ animes, favoriteAnimes });
 
 export default rootReducer;
