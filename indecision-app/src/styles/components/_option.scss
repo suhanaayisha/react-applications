@@ -1,17 +1,42 @@
-@use 'sass:color';
 @use '../base/settings' as *;
 
 .option{
-    border-bottom: 1px solid color.adjust($light-blue, $lightness: 10%);
+    align-items: center;
+    animation: option-in 200ms ease-out;
+    border-bottom: 0.1rem solid $border;
     display: flex;
-    justify-content: space-between;
-    padding: $l-size $m-size;
+    gap: $m-size;
+    padding: $m-size $m-size $m-size 2rem;
+    transition: background 150ms ease;
+}
+
+.option:hover{
+    background: rgba(white, 0.03);
+}
+
+.option__count{
+    align-items: center;
+    background: rgba($purple, 0.2);
+    border-radius: 50%;
+    color: #c6aef0;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    height: 2.8rem;
+    justify-content: center;
+    width: 2.8rem;
 }
 
 .option__text{
-    color: white;
+    flex-grow: 1;
+    font-size: 1.8rem;
     font-weight: 500;
-    font-size: 2rem;
     margin: 0;
-    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
+@keyframes option-in{
+    from { opacity: 0; transform: translateY(-0.4rem); }
+    to { opacity: 1; transform: translateY(0); }
 }

@@ -1,28 +1,35 @@
 @use '../base/settings' as *;
 
 .header{
-    background: $off-black;
-    color: white;
-    margin-bottom: $m-size;
-    padding: $m-size, 0;
+    padding: $xl-size 0 $l-size;
+    text-align: center;
 }
 
 //BEM block element modifier
 .header__title{
-    font-size: $l-size;
+    background: $accent-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4.4rem;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
     margin: 0;
 }
 
 .header__subtitle{
-    color: $off-white;
-    font-size:$m-size; 
-    font-weight: 500;
-
+    color: $text-muted;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: $s-size 0 0;
 }
-@media(min-width:$desktop-breakpoint){
 
-    .header{
-        margin-bottom: $xl-size;
+@media(min-width:$desktop-breakpoint){
+    .header__title{
+        font-size: 5.6rem;
     }
-    
+}
+
+.header__content{
+    padding-bottom: 0;
 }

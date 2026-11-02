@@ -2,17 +2,16 @@ import React from 'react';
 
 const Option = (props) => (
     <div className='option'>
-    {props.optionText && <p className='option__text'>{props.count}. {props.optionText}</p>}
-        {props.optionText && 
+        <span className='option__count'>{props.count}</span>
+        <p className='option__text'>{props.optionText}</p>
         <button 
-        className='button--link'
-        onClick={(e)=> {
-            props.handleDeleteOption(props.optionText);
-        }
-            }>
-            remove
+        className='button--link button--icon'
+        aria-label={`Remove ${props.optionText}`}
+        title='Remove'
+        onClick={()=> props.handleDeleteOption(props.optionText)}
+        >
+            &times;
         </button>
-    }
     </div>
 );
 

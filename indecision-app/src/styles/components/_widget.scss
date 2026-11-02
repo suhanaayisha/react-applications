@@ -1,27 +1,45 @@
-@use 'sass:color';
 @use '../base/settings' as *;
 
-//widget header
 .widget{
-    background: $light-blue;
-    margin-bottom: $xl-size
+    background: $surface;
+    border: 0.1rem solid $border;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    overflow: hidden;
 }
+
 .widget-header{
-    background: $blue;
-    color: $off-white;
+    align-items: center;
+    border-bottom: 0.1rem solid $border;
     display: flex;
     justify-content: space-between;
-    padding: $m-size;
+    padding: $m-size $m-size $m-size 2rem;
 }
 
 .widget-header__title{
+    font-size: 1.8rem;
+    font-weight: 600;
     margin: 0;
 }
 
+.widget-header__count{
+    background: $surface-raised;
+    border-radius: 99rem;
+    color: $text-muted;
+    font-size: 1.3rem;
+    margin-left: 0.8rem;
+    padding: 0.2rem 0.9rem;
+}
+
 .widget__message{
-    border-bottom: 0.1rem solid color.adjust($light-blue, $lightness: 10%) ;
-    color: $off-white;
+    color: $text-muted;
     margin: 0;
-    padding: $l-size;
-    text-align: center;  
+    padding: $xl-size $l-size;
+    text-align: center;
+}
+
+.widget__message-icon{
+    display: block;
+    font-size: 3.2rem;
+    margin-bottom: 0.8rem;
 }

@@ -1,38 +1,41 @@
-@use 'sass:color';
 @use '../base/settings' as *;
 
 .add-option-error{
-    color: $off-white;
-    font-style: italic;
-    padding: 0 $m-size;
-    margin: $m-size 0 0 0;
+    color: $danger;
+    font-size: 1.4rem;
+    margin: $m-size $m-size 0 2rem;
 }
 
 .add-option{
     display: flex;
     flex-direction: column;
+    gap: $s-size;
     padding: $m-size;
 }
 
 .add-option__input{
-    background: $dark-blue;
-    border: none;
-    border-bottom: 0.3rem solid color.adjust($dark-blue, $lightness: -10%);
-    color: $off-white;
-    padding: $s-size;
+    background: $bg;
+    border: 0.1rem solid $border;
+    border-radius: $radius-s;
+    color: $text;
     flex-grow: 1;
-    margin: 0 0 $s-size 0;
-    // margin-right: $s-size;
+    font: inherit;
+    padding: $s-size $m-size;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.add-option__input::placeholder{
+    color: rgba($text-muted, 0.7);
+}
+
+.add-option__input:focus{
+    border-color: $purple;
+    box-shadow: 0 0 0 0.3rem rgba($purple, 0.3);
+    outline: none;
 }
 
 @media(min-width:$desktop-breakpoint){
-
     .add-option{
         flex-direction: row;  
     }
-    .add-option__input{
-        margin: 0;
-        margin-right: $s-size;
-    }
 }
-

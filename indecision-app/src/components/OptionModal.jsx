@@ -9,9 +9,9 @@ const OptionModal = (props) => (
     closeTimeoutMS={400}
     className="modal"
     >
-    <h3 className="modal__title">Selected Option</h3>
+    <h3 className="modal__title">You should</h3>
     {props.selectedOption && <p className="modal__body">{props.selectedOption}</p>}
-    <button className="button" onClick={props.handleModal}>Okay</button>
+    <button className="button" onClick={props.handleModal}>Sounds good</button>
     </Modal>
 );
 export default OptionModal;

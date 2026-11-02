@@ -82,7 +82,7 @@ export default class IndecisionApp extends React.Component {
     render(){
         //props are like attr in html. They are used to maintain reusability of components
         const title="Indecision";
-        const subtitle="Put your life in our hands";
+        const subtitle="Put your life in the hands of a computer";
         
         return (
             <div>
